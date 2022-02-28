@@ -8755,10 +8755,18 @@ section {
     margin-bottom: 14px; }
   .contacts .user {
     display: flex;
-    align-items: center; }
+    flex-direction: column; }
+    @media only screen and (min-width: 768px) {
+      .contacts .user {
+        align-items: center;
+        flex-direction: row; } }
     .contacts .user p {
       font-size: 0.875rem;
-      color: #14213d; }
+      color: #14213d;
+      margin-bottom: 4px; }
+      @media only screen and (min-width: 768px) {
+        .contacts .user p {
+          margin-bottom: 0; } }
     .contacts .user-details {
       padding: 12px 15px;
       border: 1px solid #d0d3d8;
