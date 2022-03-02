@@ -8258,6 +8258,34 @@ a {
     .modal-body .ticket .barcode {
       margin-top: 20px; }
 
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 17px;
+  border: 1px solid #f3f4f5; }
+  .alert-content {
+    display: flex;
+    gap: 4px; }
+    .alert-content .text {
+      display: flex;
+      gap: 2px; }
+      .alert-content .text p,
+      .alert-content .text h6,
+      .alert-content .text .h6 {
+        margin-bottom: 0; }
+      .alert-content .text p {
+        font-size: 0.875rem;
+        color: #14213d; }
+      .alert-content .text-inline {
+        flex-direction: row;
+        align-items: center; }
+      .alert-content .text-block {
+        flex-direction: column;
+        align-items: flex-start; }
+  .alert-warning {
+    border-left: 6px solid #f3aa1c; }
+
 /* Sections */
 .account .container-fluid, .account .container-sm, .account .container-md, .account .container-lg, .account .container-xl, .account .container-xxl {
   position: relative;
@@ -8890,6 +8918,17 @@ a {
         font-size: 0.875rem;
         color: #ffff;
         margin-left: 25px; }
+      .home-nominate-contest .note {
+        background-color: transparent;
+        padding-left: 18px;
+        border-left: 6px solid #f3aa1c;
+        margin-bottom: 20px;
+        color: #bdc3bf;
+        font-size: 0.875rem;
+        width: 100%; }
+        @media only screen and (min-width: 768px) {
+          .home-nominate-contest .note {
+            width: 80%; } }
   .home-success .container {
     display: flex;
     align-items: center;
@@ -9824,6 +9863,17 @@ section {
         font-size: 0.875rem;
         color: #ffff;
         margin-left: 25px; }
+      .home-nominate-contest .note {
+        background-color: transparent;
+        padding-left: 18px;
+        border-left: 6px solid #f3aa1c;
+        margin-bottom: 20px;
+        color: #bdc3bf;
+        font-size: 0.875rem;
+        width: 100%; }
+        @media only screen and (min-width: 768px) {
+          .home-nominate-contest .note {
+            width: 80%; } }
   .home-success .container {
     display: flex;
     align-items: center;
