@@ -8132,6 +8132,12 @@ a {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
+    .btn-sm:disabled, .btn-group-sm > .btn:disabled {
+      border: none;
+      cursor: not-allowed;
+      pointer-events: all !important;
+      color: #14213d !important;
+      background-color: #E7F0FC; }
   .btn-lg, .btn-group-lg > .btn {
     height: 49px; }
     @media only screen and (min-width: 768px) {
@@ -8179,6 +8185,11 @@ a {
   border: none;
   cursor: pointer;
   margin-bottom: 4px; }
+  .card img {
+    width: 100%;
+    height: 170.44px;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .card:hover {
     box-shadow: 0 10px 10px -5px #818181; }
   .card-body {
@@ -8199,7 +8210,13 @@ a {
         height: 32px;
         border-radius: 100%; }
     .card-body .ticket {
-      margin-top: 14px; }
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px; }
+      .card-body .ticket span {
+        color: #434d64;
+        font-size: 0.875rem; }
     @media only screen and (min-width: 768px) {
       .card-body .bottom {
         position: absolute;
@@ -8225,6 +8242,8 @@ a {
 .table {
   min-width: 1260px;
   margin-top: 60px; }
+  .table > :not(caption) > * > * {
+    border-color: #D0D3D8; }
   .table th,
   .table tr {
     height: 72px; }
@@ -8319,6 +8338,11 @@ a {
 .account-dashboard, .account-intro {
   position: relative;
   height: 100%; }
+  .account-dashboard .account-form h2, .account-dashboard .account-form .h2, .account-intro .account-form h2, .account-intro .account-form .h2 {
+    color: #14213d; }
+  .account-dashboard .account-form p, .account-intro .account-form p {
+    color: #434d64;
+    font-size: 14px; }
 
 .account-dashboard {
   width: 80%;
@@ -8407,9 +8431,18 @@ a {
       .forget-password .wrapper,
       .reset-password .wrapper {
         width: 35%; } }
+    .forget-password .wrapper .account-form h2, .forget-password .wrapper .account-form .h2,
+    .reset-password .wrapper .account-form h2,
+    .reset-password .wrapper .account-form .h2 {
+      color: #14213d; }
+    .forget-password .wrapper .account-form p,
+    .reset-password .wrapper .account-form p {
+      font-size: 0.875rem;
+      color: #434d64; }
     .forget-password .wrapper .account-footer,
     .reset-password .wrapper .account-footer {
-      margin-top: 87px; }
+      margin-top: 87px;
+      color: #14213d; }
 
 .forget-password {
   height: 100vh; }
@@ -8438,9 +8471,12 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+    .reset-alert .wrapper h3, .reset-alert .wrapper .h3,
+    .reset-alert .wrapper p {
+      color: #14213d; }
     .reset-alert .wrapper p {
       margin: 16px 0;
-      color: #14213d; }
+      font-size: 0.875rem; }
   .reset-alert--success {
     margin-bottom: 30px; }
 
@@ -8535,7 +8571,7 @@ a {
         .page-information-note {
           height: calc(100vh - 100px); } }
       .page-information-note p {
-        color: #727a8b;
+        color: #a1a6b1;
         margin-top: 32px; }
   .page-images {
     width: 100%; }
@@ -8633,16 +8669,16 @@ a {
       .home .user-awards .container .info img,
       .home .contestants .container .info img {
         width: 100%;
-        height: 100%;
+        height: 196px;
         margin-right: auto;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        -o-object-fit: cover;
+           object-fit: cover; }
         @media only screen and (min-width: 768px) {
           .home .user-awards .container .info img,
           .home .contestants .container .info img {
             width: 252px;
-            height: 194px;
-            -o-object-fit: cover;
-               object-fit: cover; } }
+            height: 194px; } }
       .home .user-awards .container .info-note,
       .home .contestants .container .info-note {
         color: #bdc3bf; }
@@ -8847,9 +8883,6 @@ a {
   .home-nominate {
     padding: 0;
     height: 100%; }
-    @media only screen and (min-width: 992px) {
-      .home-nominate {
-        height: calc(100vh - 396px); } }
     .home-nominate .container {
       height: 100%;
       flex-direction: column; }
@@ -9054,10 +9087,33 @@ section {
 
 .event-news .hero,
 .contests-news .hero {
-  height: calc(100vh - 100px);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  position: relative;
+  height: 436px;
+  overflow: hidden; }
+  .event-news .hero-image,
+  .contests-news .hero-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .event-news .hero .overlay,
+  .contests-news .hero .overlay {
+    display: none;
+    position: absolute;
+    width: 292px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0; }
+    .event-news .hero .overlay-left,
+    .contests-news .hero .overlay-left {
+      left: 0; }
+    .event-news .hero .overlay-right,
+    .contests-news .hero .overlay-right {
+      right: 0; }
+    @media only screen and (min-width: 992px) {
+      .event-news .hero .overlay,
+      .contests-news .hero .overlay {
+        display: block; } }
 
 .event-news-details .col-lg-4,
 .contests-news-details .col-lg-4 {
@@ -9153,12 +9209,6 @@ section {
   .contests-news-details-policy p:nth-child(2) {
     color: #434d64; }
 
-.event-news .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/signup-background.png"); }
-
-.contests-news .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/signup-background.png"); }
-
 .contests-news-details-vote {
   background-color: #ffff;
   padding: 32px;
@@ -9225,13 +9275,10 @@ section {
 
 .home .hero,
 .contests .hero {
-  min-height: calc(100vh - 100px);
+  height: 504px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  justify-content: center; }
   .home .hero h1, .home .hero .h1,
   .contests .hero h1,
   .contests .hero .h1 {
@@ -9267,10 +9314,16 @@ section {
     font-size: 1.25rem; }
 
 .home .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/signup-background.png"); }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/event-heroimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .contests .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/contest.png"); }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../img/contest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .contacts {
   padding: 10px 0 0 0;
@@ -9487,7 +9540,7 @@ section {
         .page-information-note {
           height: calc(100vh - 100px); } }
       .page-information-note p {
-        color: #727a8b;
+        color: #a1a6b1;
         margin-top: 32px; }
   .page-images {
     width: 100%; }
@@ -9585,16 +9638,16 @@ section {
       .home .user-awards .container .info img,
       .home .contestants .container .info img {
         width: 100%;
-        height: 100%;
+        height: 196px;
         margin-right: auto;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        -o-object-fit: cover;
+           object-fit: cover; }
         @media only screen and (min-width: 768px) {
           .home .user-awards .container .info img,
           .home .contestants .container .info img {
             width: 252px;
-            height: 194px;
-            -o-object-fit: cover;
-               object-fit: cover; } }
+            height: 194px; } }
       .home .user-awards .container .info-note,
       .home .contestants .container .info-note {
         color: #bdc3bf; }
@@ -9799,9 +9852,6 @@ section {
   .home-nominate {
     padding: 0;
     height: 100%; }
-    @media only screen and (min-width: 992px) {
-      .home-nominate {
-        height: calc(100vh - 396px); } }
     .home-nominate .container {
       height: 100%;
       flex-direction: column; }
