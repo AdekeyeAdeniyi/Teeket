@@ -8191,7 +8191,7 @@ a {
     -o-object-fit: cover;
        object-fit: cover; }
   .card:hover {
-    box-shadow: 0 10px 10px -5px #818181; }
+    box-shadow: 0px 4.375px 4.625px 0px #00000004, 0px 20px 13px 0px #00000006, 0px 50.625px 34.875px 0px #00000009, 0px 100px 80px 0px #0000000D; }
   .card-body {
     padding: 0;
     margin: 20px; }
