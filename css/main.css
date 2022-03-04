@@ -7928,14 +7928,22 @@ html {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 11.2px; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 13.6px; } }
+  @media only screen and (min-width: 992px) {
+    html {
+      font-size: 16px; } }
 
 body {
   box-sizing: inherit;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
   font-family: "Sora", Arial, Helvetica, sans-serif;
-  background-color: #ffff; }
+  background-color: #ffff;
+  font-size: inherit; }
 
 h1, .h1,
 .h1, h2, .h2,
@@ -8092,8 +8100,11 @@ a {
   align-items: center;
   font-family: "Sora", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  height: 56px;
+  height: 45px;
   font-size: 0.875rem; }
+  @media only screen and (min-width: 768px) {
+    .btn {
+      height: 56px; } }
   .btn-icon {
     gap: 8px; }
   .btn-primary--light {
@@ -8108,12 +8119,21 @@ a {
   .btn-xs {
     padding: 4px 8px;
     height: 25px;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
   .btn-sm, .btn-group-sm > .btn {
     padding: 7px 16px;
-    height: 32px; }
+    height: 32px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
   .btn-lg, .btn-group-lg > .btn {
-    height: 60px; }
+    height: 49px; }
+    @media only screen and (min-width: 768px) {
+      .btn-lg, .btn-group-lg > .btn {
+        height: 60px; } }
   .btn-white {
     background-color: #ffff; }
 
@@ -8154,7 +8174,8 @@ a {
   overflow: hidden;
   border-radius: 8px;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 4px; }
   .card:hover {
     box-shadow: 0 10px 10px -5px #818181; }
   .card-body {
@@ -8294,23 +8315,24 @@ a {
 
 .account-dashboard, .account-intro {
   position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 70px 24px 0 24px; }
-  @media only screen and (min-width: 576px) {
-    .account-dashboard, .account-intro {
-      padding: 70px 80px 0 80px; } }
-  @media only screen and (min-width: 768px) {
-    .account-dashboard, .account-intro {
-      padding: 70px 100px 0 100px; } }
+  height: 100%; }
 
-.account-dashboard .wrapper {
-  width: 100%;
-  height: 100%;
+.account-dashboard {
+  width: 80%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  padding-top: 60px; }
+  .account-dashboard .wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .account-dashboard .wrapper .form {
+      width: 100%; }
+      @media only screen and (min-width: 768px) {
+        .account-dashboard .wrapper .form {
+          width: 80%; } }
 
 .account-intro {
   background-repeat: no-repeat;
@@ -8352,7 +8374,6 @@ a {
 .reset-password {
   position: relative;
   width: 100%;
-  height: 100%;
   padding: 70px 24px 0 24px; }
   @media only screen and (min-width: 576px) {
     .forget-password,
@@ -8361,8 +8382,7 @@ a {
   @media only screen and (min-width: 768px) {
     .forget-password,
     .reset-password {
-      padding: 70px 100px 0 100px;
-      height: 100vh; } }
+      padding: 70px 100px 0 100px; } }
   .forget-password .wrapper,
   .reset-password .wrapper {
     width: 100%;
@@ -8387,6 +8407,15 @@ a {
     .forget-password .wrapper .account-footer,
     .reset-password .wrapper .account-footer {
       margin-top: 87px; }
+
+.forget-password {
+  height: 100vh; }
+
+.reset-password {
+  height: 100%; }
+  @media only screen and (min-width: 992px) {
+    .reset-password {
+      height: 100vh; } }
 
 .reset-alert {
   position: relative;
@@ -8954,9 +8983,16 @@ section {
 .filter-events .h3 {
   color: #14213d; }
 
-.top-events-list .row:not(:last-child),
-.filter-events-list .row:not(:last-child) {
-  margin-bottom: 37px; }
+.top-events-list .row,
+.filter-events-list .row {
+  gap: 20px; }
+  @media only screen and (min-width: 576px) {
+    .top-events-list .row,
+    .filter-events-list .row {
+      gap: 0; } }
+  .top-events-list .row:not(:last-child),
+  .filter-events-list .row:not(:last-child) {
+    margin-bottom: 37px; }
 
 .top-events .nav,
 .filter-events .nav {
