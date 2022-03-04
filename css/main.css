@@ -8085,8 +8085,11 @@ a {
 
 .transition + .form-label {
   position: absolute;
-  top: 12px;
+  top: 16px;
   left: 25px; }
+  @media only screen and (min-width: 768px) {
+    .transition + .form-label {
+      top: 12px; } }
 
 .transition:focus, .transition:valid {
   margin-top: 40px; }
@@ -8456,8 +8459,11 @@ a {
     top: 12px;
     left: 24px; }
   .form-icon-left .form-label {
-    top: 12px;
+    top: 16px;
     left: 52px; }
+    @media only screen and (min-width: 768px) {
+      .form-icon-left .form-label {
+        top: 12px; } }
 
 .form-icon-right {
   position: relative; }
@@ -8468,8 +8474,11 @@ a {
     top: 12px;
     right: 24px; }
   .form-icon-right .form-label {
-    top: 12px;
+    top: 16px;
     left: 52px; }
+    @media only screen and (min-width: 768px) {
+      .form-icon-right .form-label {
+        top: 12px; } }
 
 .form-icon-lg {
   position: relative; }
