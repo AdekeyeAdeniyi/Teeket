@@ -8080,9 +8080,9 @@ a {
   top: 12px;
   left: 25px; }
 
-.transition:focus {
+.transition:focus, .transition:valid {
   margin-top: 40px; }
-  .transition:focus ~ .form-label {
+  .transition:focus ~ .form-label, .transition:valid ~ .form-label {
     top: -30px;
     left: 0; }
 
