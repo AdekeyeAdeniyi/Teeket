@@ -8488,7 +8488,8 @@ a {
 
 .form-icon-left {
   position: relative; }
-  .form-icon-left .form-control {
+  .form-icon-left .form-control,
+  .form-icon-left .form-select {
     padding-left: 52px; }
   .form-icon-left .icon-left {
     position: absolute;
@@ -8503,7 +8504,8 @@ a {
 
 .form-icon-right {
   position: relative; }
-  .form-icon-right .form-control {
+  .form-icon-right .form-control,
+  .form-icon-right .form-select {
     padding-right: 52px; }
   .form-icon-right .icon-right {
     position: absolute;
@@ -8948,10 +8950,12 @@ a {
       @media only screen and (min-width: 992px) {
         .home-nominate-contest {
           padding-left: 60px; } }
-      .home-nominate-contest form .form-control {
+      .home-nominate-contest form .form-control,
+      .home-nominate-contest form .form-select {
         width: 100%; }
         @media only screen and (min-width: 768px) {
-          .home-nominate-contest form .form-control {
+          .home-nominate-contest form .form-control,
+          .home-nominate-contest form .form-select {
             width: 80%; } }
       .home-nominate-contest form .form-label {
         color: #a1a6b1; }
@@ -9917,10 +9921,12 @@ section {
       @media only screen and (min-width: 992px) {
         .home-nominate-contest {
           padding-left: 60px; } }
-      .home-nominate-contest form .form-control {
+      .home-nominate-contest form .form-control,
+      .home-nominate-contest form .form-select {
         width: 100%; }
         @media only screen and (min-width: 768px) {
-          .home-nominate-contest form .form-control {
+          .home-nominate-contest form .form-control,
+          .home-nominate-contest form .form-select {
             width: 80%; } }
       .home-nominate-contest form .form-label {
         color: #a1a6b1; }
