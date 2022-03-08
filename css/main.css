@@ -8844,7 +8844,12 @@ a {
           .home .user-awards .container .performers .contestant-title .other,
           .home .contestants .container .performers .contestant-title .other {
             display: flex;
-            gap: 10px; }
+            gap: 10px;
+            align-items: center; }
+            .home .user-awards .container .performers .contestant-title .other p,
+            .home .contestants .container .performers .contestant-title .other p {
+              margin-bottom: 0;
+              font-size: 10px; }
             .home .user-awards .container .performers .contestant-title .other-images,
             .home .contestants .container .performers .contestant-title .other-images {
               display: flex;
@@ -8864,9 +8869,9 @@ a {
           .home .contestants .container .performers .contestant-title h4,
           .home .contestants .container .performers .contestant-title .h4 {
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -55%);
             display: block;
             width: 100%;
             text-align: center; }
@@ -9815,7 +9820,12 @@ section {
           .home .user-awards .container .performers .contestant-title .other,
           .home .contestants .container .performers .contestant-title .other {
             display: flex;
-            gap: 10px; }
+            gap: 10px;
+            align-items: center; }
+            .home .user-awards .container .performers .contestant-title .other p,
+            .home .contestants .container .performers .contestant-title .other p {
+              margin-bottom: 0;
+              font-size: 10px; }
             .home .user-awards .container .performers .contestant-title .other-images,
             .home .contestants .container .performers .contestant-title .other-images {
               display: flex;
@@ -9835,9 +9845,9 @@ section {
           .home .contestants .container .performers .contestant-title h4,
           .home .contestants .container .performers .contestant-title .h4 {
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -55%);
             display: block;
             width: 100%;
             text-align: center; }
