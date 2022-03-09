@@ -8086,16 +8086,50 @@ a {
 .transition + .form-label {
   position: absolute;
   top: 16px;
-  left: 25px; }
+  left: 25px;
+  display: none;
+  transition: top .4s ease;
+  pointer-events: none; }
   @media only screen and (min-width: 768px) {
     .transition + .form-label {
       top: 12px; } }
 
-.transition:focus, .transition:valid {
+.transition:not(:-moz-placeholder-shown) {
   margin-top: 40px; }
-  .transition:focus ~ .form-label, .transition:valid ~ .form-label {
+
+.transition:not(:-ms-input-placeholder) {
+  margin-top: 40px; }
+
+.transition:not(:placeholder-shown), .transition:invalid {
+  margin-top: 40px; }
+  .transition:not(:-moz-placeholder-shown) ~ .form-label {
     top: -30px;
-    left: 0; }
+    left: 0;
+    display: block; }
+  .transition:not(:-ms-input-placeholder) ~ .form-label {
+    top: -30px;
+    left: 0;
+    display: block; }
+  .transition:not(:placeholder-shown) ~ .form-label, .transition:invalid ~ .form-label {
+    top: -30px;
+    left: 0;
+    display: block; }
+
+.floating-select + .form-label {
+  position: absolute;
+  top: 16px;
+  left: 25px;
+  pointer-events: none; }
+  @media only screen and (min-width: 768px) {
+    .floating-select + .form-label {
+      top: 12px; } }
+
+.floating-select:focus, .floating-select:valid {
+  margin-top: 40px; }
+  .floating-select:focus ~ .form-label, .floating-select:valid ~ .form-label {
+    top: -30px;
+    left: 0;
+    display: block; }
 
 .btn {
   display: inline-flex;
